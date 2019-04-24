@@ -27,13 +27,6 @@
       addition($A, $B);
       echo 'Résultat addition :' .addition($A,$B). '<br>';
       //idem en pgcd
-      /*function pgcd($A, $B){
-        $pgc = $A % $B;
-        return $pgc;
-      }
-      pgcd($A, $B);
-      echo 'Résultat pgcd :' .pgcd($A,$B). '<br>';*/
-
       function pgcd($nombre,$nombre2){
         while($nombre>1){
         $reste = $nombre%$nombre2;
@@ -46,7 +39,8 @@
       return $nombre2; // retourne le resultat
     }
     echo pgcd( 120,420 );
-// Affiche 60
+    // Affiche 60
+    //il existe une fonction php pré-faite pour calculer un pgcd: gmp_gcd(a,b)
 
       //afficher "Je vais faire du bon visuel" si x (nb aléatoire entre 1 et 100) <50 sinon "Je suis un piou piou"
       $x = rand(1, 100);
@@ -142,8 +136,8 @@
           echo "$x =" .$tableau[$x]. '<br>';
         }
       //créer fonction qui trie tableau de 10 valeurs
-      echo 'je trie mon tableau avec sort <br>';
-      sort($tableau);
+      echo 'je trie mon tableau avec sort <br>'; //pour la lisibilité sur le localhost
+      sort($tableau); //le tableau est trié mais la fonction ne renvoie rien
       /*print_r($tableau); fonctionne aussi a la place de foreach*/
       foreach($tableau as $index => $valeur){
         echo "$index = $valeur <br>";
