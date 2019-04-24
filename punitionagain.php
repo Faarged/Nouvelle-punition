@@ -137,14 +137,15 @@
       $tableau = array();
         for($x = 0; $x < 10; $x++){
           $alea = rand(1,50);
-          //$tableau = array('');
+          //$tableau = array(''); si je laisse ça là, le tableau se recré a chaque boucle
           array_push($tableau, $alea);
           echo $tableau[$x]. '<br>';
         }
       //créer fonction qui trie tableau de 10 valeurs
       sort($tableau,SORT_NUMERIC);
+      /*print_r($tableau); fonctionne aussi*/
       foreach($tableau as $index => $valeur){
-        /*print_r($tableau);*/echo "$index = $valeur <br>";
+        echo "$index = $valeur <br>";
       }
       //utiliser une autre méthode pour l'instruction précédente
 
