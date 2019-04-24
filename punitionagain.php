@@ -134,10 +134,11 @@
       }
       inclusion();
       //generer 10 valeurs aléatoires qui seront ajoutées à un tableau tab
+      $tableau = array();
         for($x = 0; $x < 10; $x++){
-          $aléa = rand(1,50);
-          $tableau = array('','','','','','','','','','');
-          $tableau[] = $aléa;
+          $alea = rand(1,50);
+          //$tableau = array('');
+          array_push($tableau, $alea);
           echo $tableau[$x]. '<br>';
         }
       //créer fonction qui trie tableau de 10 valeurs
